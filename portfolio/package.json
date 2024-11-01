@@ -1,0 +1,57 @@
+{
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "cy:open": "cypress open",
+    "test:cypress": "cypress run",
+    "prepare": "husky",
+    "test": "pnpm lint-staged && pnpm test:cypress"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.59.16",
+    "antd": "^5.21.6",
+    "axios": "^1.7.7",
+    "husky": "^9.1.6",
+    "next": "14.2.11",
+    "react": "^18",
+    "react-dom": "^18",
+    "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "3.2.2",
+    "@storybook/addon-essentials": "8.4.1",
+    "@storybook/addon-interactions": "8.4.1",
+    "@storybook/addon-onboarding": "8.4.1",
+    "@storybook/blocks": "8.4.1",
+    "@storybook/nextjs": "^8.4.1",
+    "@storybook/react": "8.4.1",
+    "@storybook/test": "8.4.1",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "cypress": "^13.15.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.11",
+    "eslint-plugin-storybook": "^0.10.2",
+    "postcss": "^8",
+    "storybook": "8.4.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.css": [
+      "prettier --write"
+    ]
+  }
+}
